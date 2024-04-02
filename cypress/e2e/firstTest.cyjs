@@ -1,0 +1,17 @@
+describe('example to-do app', () => {
+  beforeEach(() => {
+    cy.visit('https://example.cypress.io/todo')
+  })
+
+  it('visits login page', () => {
+
+    cy.visit('https://nichethyself.com/tourism/home.html')
+    cy.get('input[name="username"]').type("stc123")
+    cy.get('input[name="password]').type("")
+    cy.get('#loginsection > form').click()
+    cy.title().should("eq", " My account")
+    cy.url().should("contain", "nichethyself.com")
+
+
+  })
+})
